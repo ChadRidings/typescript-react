@@ -36,6 +36,7 @@ const userContextInitialValues: UserContextType = {
     deleteUser: () => null,
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const UserContext = createContext<UserContextType>(userContextInitialValues);
 
 interface UserContextProviderProps {
@@ -48,11 +49,7 @@ export const UserContextProvider = (props: UserContextProviderProps) => {
 
     // Function to add a user
     const addUser = (user: UserType) => {
-        if (users) {
-            setUsers([...users, user]);
-        } else {
-            setUsers([user]);
-        }
+        setUsers(users ? [...users, user] : [user]);
     };
 
     // Function to delete a user
@@ -93,6 +90,14 @@ export const UserContextProvider = (props: UserContextProviderProps) => {
         };
         fetchUsers();
     }, []);
+
+    if (fetchError) {
+        return <div className="text-red-500 p-5">Error fetching users</div>;
+    }
+
+    if (!users) {
+        return <div className="p-5">Loading users...</div>;
+    }
 
     return (
         <UserContext.Provider value={{ users, addUser, updateUser, deleteUser }}>

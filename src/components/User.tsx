@@ -15,6 +15,7 @@ const User = () => {
                         <h3 className="font-bold">{user.name}</h3>
                         <p>Email: {user.email ? <a href={`mailto:${user.email}`} className="text-sky-500 italic">{user.email}</a> : "N/A"}</p>
                         <p>Phone: {user.phone}</p>
+                        <p>Website: {user.website ? <a href={`//${user.website}`} title={user.website} className="text-sky-500 italic" target="_blank">{user.website}</a> : "N/A"}</p>
                         <div className="flex flex-row">
                             <p className="mr-1">Address:</p>
                             <p>
@@ -22,7 +23,6 @@ const User = () => {
                                 {user.address.city}, {user.address.zipcode}
                             </p>
                         </div>
-                        <p>Website: {user.website ? <a href={`//${user.website}`} title={user.website} className="text-sky-500 italic" target="_blank">{user.website}</a> : "N/A"}</p>
                     </div>
                 ))}
             </div>
