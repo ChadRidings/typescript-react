@@ -13,9 +13,16 @@ const User = () => {
                 {users && users.map((user: UserType) => (
                     <div className="flex flex-col mb-5" key={user.id}>
                         <h3 className="font-bold">{user.name}</h3>
-                        <p>Phone: {user.phone}</p>
                         <p>Email: {user.email ? <a href={`mailto:${user.email}`} className="text-sky-500 italic">{user.email}</a> : "N/A"}</p>
-                        <p>Website: {user.website ? <a href={user.website} className="text-sky-500 italic">{user.website}</a> : "N/A"}</p>
+                        <p>Phone: {user.phone}</p>
+                        <div className="flex flex-row">
+                            <p className="mr-1">Address:</p>
+                            <p>
+                                {user.address.street}, {user.address.suite ? user.address.suite : ''}<br />
+                                {user.address.city}, {user.address.zipcode}
+                            </p>
+                        </div>
+                        <p>Website: {user.website ? <a href={`//${user.website}`} title={user.website} className="text-sky-500 italic" target="_blank">{user.website}</a> : "N/A"}</p>
                     </div>
                 ))}
             </div>
