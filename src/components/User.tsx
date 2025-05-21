@@ -6,7 +6,7 @@ const User = () => {
     const { users, addUser, updateUser, deleteUser } = useContext(UserContext);
 
     return (
-        <div className="flex flex-col items-center p-5 text-gray-600 dark:bg-gray-800 dark:text-gray-200">
+        <div className="flex flex-col items-start p-5 text-gray-600 dark:bg-gray-800 dark:text-gray-200">
             <h1 className="text-3xl font-bold mb-5 text-teal-500">User Details</h1>
 
             <div className="flex flex-col mb-5">
