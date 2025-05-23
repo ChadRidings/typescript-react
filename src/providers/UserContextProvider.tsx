@@ -1,43 +1,6 @@
-import { createContext, useState, useEffect } from "react";
-
-export interface UserType {
-    id: string;
-    name: string;
-    phone: string;
-    email: string;
-    website: string;
-    address: {
-        city: string;
-        street: string;
-        suite: string;
-        zipcode: string;
-    };
-    company: {
-        name: string;
-        catchPhrase: string;
-        bs: string;
-    };
-    username: string;
-    age: number;
-    isMarried: boolean;
-}
-
-interface UserContextType {
-    users: UserType[] | null;
-    addUser: (user: UserType) => void;
-    updateUser: (id: string) => void;
-    deleteUser: (id: string) => void;
-}
-
-const userContextInitialValues: UserContextType = {
-    users: null,
-    addUser: () => null,
-    updateUser: () => null,
-    deleteUser: () => null,
-};
-
-// eslint-disable-next-line react-refresh/only-export-components
-export const UserContext = createContext<UserContextType>(userContextInitialValues);
+import { useState, useEffect } from "react";
+import type { UserType } from "../types";
+import { UserContext } from "../context";
 
 interface UserContextProviderProps {
     children: React.ReactNode;
