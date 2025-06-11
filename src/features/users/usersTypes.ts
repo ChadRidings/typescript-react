@@ -18,11 +18,4 @@ export interface UserType {
     username: string;
     age: number;
     isMarried: boolean;
-};
-
-export interface UserContextType {
-    users: UserType[] | null;
-    addUser: (user: UserType) => void;
-    updateUser: (id: string) => void;
-    deleteUser: (id: string) => void;
-};
+}
