@@ -58,3 +58,23 @@ You write the same styles directly in your HTML using utility classes:
 </button>
 ```
 
+#### @apply – Utility Extraction in CSS
+Use @apply inside your CSS (or PostCSS) files to create reusable utility class groups.
+
+Example: Button Styles
+```css
+/* styles.css */
+.btn {
+  @apply px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700;
+}
+.btn-outline {
+  @apply px-4 py-2 rounded border border-blue-600 text-blue-600 hover:bg-blue-100;
+}
+```
+```html
+<button className="btn">Submit</button>
+<button className="btn-outline">Cancel</button>
+```
+
+This is best used for repeatable patterns like buttons, cards, tags, etc.
+
