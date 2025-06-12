@@ -21,14 +21,14 @@ npm run dev // runs the application in localhost
 ### State Management
 I'm using Redux for state management and thunks to handle any side effects.
 
-**Common Side Effects Thunks Handle:**
+#### Common Side Effects Thunks Handle:
 - Fetching data from APIs
 - Posting data to servers
 - Delaying actions (e.g., timeouts)
 - Conditionally dispatching actions based on current state
 - Chaining multiple actions
 
-**Why Use Thunks for Side Effects?**
+#### Why Use Thunks for Side Effects?
 Redux reducers must be pure functions, meaning they cannot:
 - Make network requests
 - Read from or write to the disk
