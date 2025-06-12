@@ -3,12 +3,9 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+  base: '/typescript-react/',
   plugins: [
     react(),
     tailwindcss(),
   ],
-  base: '/typescript-react/',
-  build: {
-    outDir: 'dist',
-  },
 });
