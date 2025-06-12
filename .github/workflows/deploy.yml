@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository
-      - name: Checkout
+      - name: Checkout typescript-react repository
         uses: actions/checkout@v3
       # Set up Node.js
       - name: Set up Node.js
@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: npm i
       # Build the application
-      - name: Build
+      - name: Build the application
         run: npm run build
       # Deploy the application to GitHub Pages
       - name: Deploy to GitHub Pages
