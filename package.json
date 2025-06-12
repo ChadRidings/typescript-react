@@ -1,6 +1,10 @@
 {
   "name": "typescript-react",
   "description": "Vite + React + TypeScript + Redux + Tailwind - by Chad Ridings",
+  "author": "Chad Ridings",
+  "license": "MIT",
+  "repository": "https://github.com/ChadRidings/typescript-react",
+  "homepage": "https://github.com/ChadRidings/typescript-react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,10 +12,13 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
+    "gh-pages": "^6.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
