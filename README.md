@@ -41,15 +41,20 @@ Tailwind CSS is a utility-first CSS framework that helps you build modern, respo
 
 #### What Does "Utility-First" Mean?
 Instead of writing custom CSS like this:
-```css .btn {
+```css
+.btn {
   background-color: blue;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-}```
+}
+```
 
 You write the same styles directly in your HTML using utility classes:
-```css <button class="bg-blue-500 text-white px-4 py-2 rounded">
+
+```css
+<button class="bg-blue-500 text-white px-4 py-2 rounded">
   Click me
-</button>```
+</button>
+```
 
