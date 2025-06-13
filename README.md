@@ -3,7 +3,7 @@
 Documentation:
 
 - [Vite Documentation](https://vite.dev/guide/) - Build tool
-- [React Documentation](https://react.dev/reference/react) - Library
+- [React Documentation](https://react.dev/reference/react) - Framework library
 - [TypeScript Documentation](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) - Scripting language
 - [React Redux Documentation](https://react-redux.js.org/tutorials/quick-start) - State management
 - [Tailwind Documentation](https://tailwindcss.com/docs/installation/using-vite) - Standardized styling
