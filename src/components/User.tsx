@@ -36,8 +36,7 @@ const User = () => {
                 <div key={user.id} className="flex flex-col mb-5">
                     <h3 className="font-bold">{user.name}</h3>
                     <p>
-                        Email:{" "}
-                        {user.email ? (
+                        Email: {user.email ? (
                             <a
                                 href={`mailto:${user.email}`}
                                 className="text-sky-500 italic"
@@ -48,10 +47,11 @@ const User = () => {
                             "N/A"
                         )}
                     </p>
-                    <p>Phone: {user.phone}</p>
                     <p>
-                        Website:{" "}
-                        {user.website ? (
+                        Phone: {user.phone ? user.phone : "N/A"}
+                    </p>
+                    <p>
+                        Website: {user.website ? (
                             <a
                                 href={`//${user.website}`}
                                 title={user.website}

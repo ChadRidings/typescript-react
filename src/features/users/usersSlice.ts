@@ -1,4 +1,3 @@
-// src/features/users/usersSlice.ts
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import type { UserType } from "./usersTypes";
