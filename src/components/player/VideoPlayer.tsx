@@ -29,11 +29,11 @@ const VideoPlayer = () => {
             />
 
             <div className="mt-2 flex gap-2">
-                <span className="font-bold">Custom Controls:</span>
-                <button onClick={handlePlay}>▶</button> |
-                <button onClick={handlePause}>⏸</button> |
-                <button onClick={() => handleSeek(-5)}>⏪</button> |
-                <button onClick={() => handleSeek(5)}>⏩</button>
+                <span className="font-bold text-2xl dark:text-white">Custom Controls:</span>
+                <button onClick={handlePlay}><i className="bi bi-play-circle text-blue-500 dark:text-white text-2xl"></i></button>
+                <button onClick={handlePause}><i className="bi bi-pause-circle text-blue-500 dark:text-white text-2xl"></i></button>
+                <button onClick={() => handleSeek(-5)}><i className="bi bi-rewind-circle text-blue-500 dark:text-white text-2xl"></i></button>
+                <button onClick={() => handleSeek(5)}><i className="bi bi-fast-forward-circle text-blue-500 dark:text-white text-2xl"></i></button>
             </div>
         </div>
     );
