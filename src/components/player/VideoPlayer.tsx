@@ -29,6 +29,7 @@ const VideoPlayer = () => {
             />
 
             <div className="mt-2 flex gap-2">
+                <span className="font-bold">Custom Controls:</span>
                 <button onClick={handlePlay}>▶</button> |
                 <button onClick={handlePause}>⏸</button> |
                 <button onClick={() => handleSeek(-5)}>⏪</button> |
