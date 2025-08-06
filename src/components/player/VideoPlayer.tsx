@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-export default function VideoPlayer() {
+const VideoPlayer = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
 
     const handlePlay = () => {
@@ -19,6 +19,8 @@ export default function VideoPlayer() {
 
     return (
         <div className="p-5 text-gray-600 dark:bg-gray-800 dark:text-gray-200">
+            <h3 className="text-2xl font-bold">Sample Video Player with Custom Controls</h3>
+            <p className="mb-4">This is a sample video player with custom controls.</p>
             <video
                 ref={videoRef}
                 className="w-full"
@@ -27,11 +29,14 @@ export default function VideoPlayer() {
             />
 
             <div className="mt-2 flex gap-2">
-                <button onClick={handlePlay}>▶</button> |
-                <button onClick={handlePause}>⏸</button> |
-                <button onClick={() => handleSeek(-5)}>⏪</button> |
-                <button onClick={() => handleSeek(5)}>⏩</button>
+                <span className="font-bold text-2xl dark:text-white">Custom Controls:</span>
+                <button onClick={handlePlay}><i className="bi bi-play-circle text-blue-500 dark:text-white text-2xl"></i></button>
+                <button onClick={handlePause}><i className="bi bi-pause-circle text-blue-500 dark:text-white text-2xl"></i></button>
+                <button onClick={() => handleSeek(-5)}><i className="bi bi-rewind-circle text-blue-500 dark:text-white text-2xl"></i></button>
+                <button onClick={() => handleSeek(5)}><i className="bi bi-fast-forward-circle text-blue-500 dark:text-white text-2xl"></i></button>
             </div>
         </div>
     );
 }
+
+export default VideoPlayer;

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Users from "./components/users/Users";
 import VideoPlayer from "./components/player/VideoPlayer";
+import Canvas from "./components/canvas/Canvas";
 
 function App() {
     const [darkMode, setDarkMode] = useState(false);
@@ -22,6 +23,7 @@ function App() {
 
                 <Users />
                 <VideoPlayer />
+                <Canvas />
             </div>
         </>
     );
