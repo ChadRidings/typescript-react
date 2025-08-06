@@ -49,6 +49,8 @@ const Canvas = () => {
 
     return (
         <div className="p-5 text-gray-600 dark:bg-gray-800 dark:text-gray-200">
+            <h3 className="text-2xl font-bold">HTML Canvas Bar Chart</h3>
+            <p className="mb-4">This is a sample bar chart drawn on a canvas.</p>
             <canvas
                 ref={canvasRef}
                 className="border border-gray-300 dark:border-gray-700 w-full h-64 mb-4"

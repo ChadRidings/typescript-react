@@ -19,6 +19,8 @@ const VideoPlayer = () => {
 
     return (
         <div className="p-5 text-gray-600 dark:bg-gray-800 dark:text-gray-200">
+            <h3 className="text-2xl font-bold">Sample Video Player with Custom Controls</h3>
+            <p className="mb-4">This is a sample video player with custom controls.</p>
             <video
                 ref={videoRef}
                 className="w-full"
