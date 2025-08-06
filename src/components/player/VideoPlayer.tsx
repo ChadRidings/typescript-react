@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-export default function VideoPlayer() {
+const VideoPlayer = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
 
     const handlePlay = () => {
@@ -35,3 +35,5 @@ export default function VideoPlayer() {
         </div>
     );
 }
+
+export default VideoPlayer;
